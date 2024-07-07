@@ -1,0 +1,9 @@
+#!/usr/bin/java --source 11
+
+//Este é um codigo java executado como script.
+//veja que o arquivo salvo nao tem a extensao .java
+public class MyJavaScript {
+    public static void main(String[] args) {
+        System.out.println("Hello.");
+    }
+}
