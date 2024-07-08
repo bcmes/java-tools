@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 
 public class MyCompletableFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -15,50 +16,50 @@ public class MyCompletableFuture {
 //        System.out.println(">> " + completableFuture.get());
 
 
-        /*
-        System.out.println("Main Thread: " + Thread.currentThread().getName());
-        CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(()->{
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            System.out.println("Future Thread: " + Thread.currentThread().getName());
-        });
-        completableFuture.get();
-        */
+
+//        System.out.println("Main Thread: " + Thread.currentThread().getName());
+//        CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(()->{
+//            try {
+//                TimeUnit.SECONDS.sleep(5);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//            System.out.println("Future Thread: " + Thread.currentThread().getName());
+//        });
+//        completableFuture.get();
 
 
-        /*
-        System.out.println("Main Thread: " + Thread.currentThread().getName());
-        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()->{
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            return "Future Thread: " + Thread.currentThread().getName();
-        });
-        System.out.println(completableFuture.get());
-         */
 
 
-        /*
-        CompletableFuture<String> completableFuture = CompletableFuture
-                .supplyAsync(()->"Like and ")
-                .thenApply(supplyResult -> supplyResult + "Subscribe ")
-                .thenApply(thenApplyResult -> thenApplyResult + "my channel.");
-        System.out.println(completableFuture.get());
-        */
+//        System.out.println("Main Thread: " + Thread.currentThread().getName());
+//        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()->{
+//            try {
+//                TimeUnit.SECONDS.sleep(5);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//            return "Future Thread: " + Thread.currentThread().getName();
+//        });
+//        System.out.println(completableFuture.get());
 
 
-        /*
-        CompletableFuture
-                .supplyAsync(()-> "Like and ")
-                .thenApply(supplyResult -> supplyResult + "Subscribe")
-                .thenAccept(thenApplyResult -> System.out.println(thenApplyResult + "!!!"))
-                .get();
-         */
+
+
+//        CompletableFuture<String> completableFuture = CompletableFuture
+//                .supplyAsync(()->"Like and ")
+//                .thenApply(supplyResult -> supplyResult + "Subscribe ")
+//                .thenApply(thenApplyResult -> thenApplyResult + "my channel.");
+//        System.out.println(completableFuture.get());
+
+
+
+
+//        CompletableFuture
+//                .supplyAsync(()-> "Like and ")
+//                .thenApply(supplyResult -> supplyResult + "Subscribe")
+//                .thenAccept(thenApplyResult -> System.out.println(thenApplyResult + "!!!"))
+//                .get();
+
 
 
         /*
@@ -215,19 +216,19 @@ public class MyCompletableFuture {
          */
 
 
-        List<String> myList = new ArrayList<>();
-        //myList.add("One");
-        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()-> {
-            if (myList.isEmpty()) {
-                throw new IllegalArgumentException("List provided cannot be empty");
-            }
-            return "List processed Successfully!";
-        }).handle((result, exception) -> {
-            if (exception == null) return result;
-            System.out.println("Exception:" + exception.getMessage());
-            return "Exception Occurred!!";
-        });
-        System.out.println("Result: " + completableFuture.get());
+//        List<String> myList = new ArrayList<>();
+//        //myList.add("One");
+//        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()-> {
+//            if (myList.isEmpty()) {
+//                throw new IllegalArgumentException("List provided cannot be empty");
+//            }
+//            return "List processed Successfully!";
+//        }).handle((result, exception) -> {
+//            if (exception == null) return result;
+//            System.out.println("Exception:" + exception.getMessage());
+//            return "Exception Occurred!!";
+//        });
+//        System.out.println("Result: " + completableFuture.get());
 
 
 
