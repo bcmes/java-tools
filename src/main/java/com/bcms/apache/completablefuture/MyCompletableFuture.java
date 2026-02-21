@@ -17,7 +17,7 @@ public class MyCompletableFuture {
 
 
 
-//        System.out.println("Main Thread: " + Thread.currentThread().getName());
+//        System.out.println("PasswordCrack Thread: " + Thread.currentThread().getName());
 //        CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(()->{
 //            try {
 //                TimeUnit.SECONDS.sleep(5);
@@ -31,7 +31,7 @@ public class MyCompletableFuture {
 
 
 
-//        System.out.println("Main Thread: " + Thread.currentThread().getName());
+//        System.out.println("PasswordCrack Thread: " + Thread.currentThread().getName());
 //        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()->{
 //            try {
 //                TimeUnit.SECONDS.sleep(5);
